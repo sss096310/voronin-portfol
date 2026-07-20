@@ -196,6 +196,7 @@
     transition: background 0.25s;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
   }
   
   .project-card:hover {
@@ -217,6 +218,17 @@
   .project-card:hover .project-image {
     opacity: 0.3;
     transform: scale(1);
+  }
+  
+  .project-card:hover .project-link {
+    border-color: #555;
+    color: #ccc;
+  }
+  
+  .project-card:hover .project-link:hover {
+    background: #fff;
+    color: #0a0a0a;
+    border-color: #fff;
   }
   
   .project-image {
@@ -277,6 +289,8 @@
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
   }
   
   .project-link {
@@ -291,17 +305,15 @@
     border-radius: 100px;
     transition: all 0.2s;
     display: inline-block;
-  }
-  
-  .project-card:hover .project-link {
-    border-color: #555;
-    color: #ccc;
+    pointer-events: auto;
+    background: transparent;
+    cursor: pointer;
   }
   
   .project-link:hover {
-    background: #fff;
-    color: #0a0a0a;
-    border-color: #fff;
+    background: #0a0a0a;
+    color: #fff;
+    border-color: #0a0a0a;
   }
   
   .project-tags {
@@ -483,6 +495,8 @@
 </div>
 
 <section class="projects">
+
+  <!-- 01 — NKEEEI, UNIQE, ARTEM SHILOVETS -->
   <a class="project-card" href="https://www.instagram.com/p/DMaeblkNVkK/" target="_blank">
     <img src="images/PARNI.JPEG" alt="nkeeei, uniqe, ARTEM SHILOVETS" class="project-image">
     <div class="project-content">
@@ -490,9 +504,6 @@
       <h3 class="project-title">nkeeei,<br>uniqe, ARTEM SHILOVETS</h3>
       <div class="project-meta">Креативный директор — VK Fest, синяя сцена</div>
       <p class="project-desc">Режиссура выступления на главной сцене фестиваля. Придумал концепцию с леопардовым хаммером как узнаваемым визуальным символом — от разъездов по Москве до выезда артистов на сцену. Полный цикл: сценарий, постановка, координация с технической командой площадки.</p>
-      <div class="project-links">
-        <a href="https://www.instagram.com/p/DMaeblkNVkK/" class="project-link" target="_blank">Reel</a>
-      </div>
     </div>
     <div class="project-tags">
       <span class="tag">Режиссура</span>
@@ -501,6 +512,7 @@
     </div>
   </a>
 
+  <!-- 02 — Люся Чеботина -->
   <a class="project-card" href="https://www.instagram.com/reel/DN2zH274uaS/" target="_blank">
     <img src="images/CHEBOTINA.JPEG" alt="Люся Чеботина" class="project-image">
     <div class="project-content">
@@ -508,9 +520,6 @@
       <h3 class="project-title">Люся<br>Чеботина</h3>
       <div class="project-meta">Режиссёр визуала — Новая Волна 2025, Казань</div>
       <p class="project-desc">Визуал для 5 выступлений на главном музыкальном конкурсе страны. Создал 3D-графику для сценического сопровождения, синхронизировал движение артистки со светом, экранами и пиротехникой. Работал с командой сценографов и режиссёров трансляции.</p>
-      <div class="project-links">
-        <a href="https://www.instagram.com/reel/DN2zH274uaS/" class="project-link" target="_blank">Reel</a>
-      </div>
     </div>
     <div class="project-tags">
       <span class="tag">Визуал</span>
@@ -519,7 +528,8 @@
     </div>
   </a>
 
-  <a class="project-card" href="https://vimeo.com/1208746630" target="_blank">
+  <!-- 03 — Клава Кока (2 ссылки) -->
+  <div class="project-card">
     <img src="images/KLAVA.JPEG" alt="Клава Кока" class="project-image">
     <div class="project-content">
       <div class="project-num">03 / 2025</div>
@@ -527,8 +537,8 @@
       <div class="project-meta">Режиссёр визуального сопровождения — сольный концерт</div>
       <p class="project-desc">Разработал визуальную концепцию сольного концерта совместно с креативным директором. Часть кадров вошла в клип, который взял награду «Клип года».</p>
       <div class="project-links">
-        <a href="https://vimeo.com/1208746630" class="project-link" target="_blank">Vimeo</a>
-        <a href="https://www.instagram.com/reel/DWGwAx8DMON/" class="project-link" target="_blank">Reel</a>
+        <a href="https://vimeo.com/1208746630" class="project-link" target="_blank" onclick="event.stopPropagation()">Vimeo</a>
+        <a href="https://www.instagram.com/reel/DWGwAx8DMON/" class="project-link" target="_blank" onclick="event.stopPropagation()">Reel</a>
       </div>
     </div>
     <div class="project-tags">
@@ -536,9 +546,10 @@
       <span class="tag">Съёмка</span>
       <span class="tag">Клип года</span>
     </div>
-  </a>
+  </div>
 
-  <a class="project-card" href="https://www.instagram.com/reel/DPBW4iUiG5b/" target="_blank">
+  <!-- 04 — Demix (2 ссылки) -->
+  <div class="project-card">
     <img src="images/DEMIX.JPEG" alt="Outlaw Moscow × Demix" class="project-image">
     <div class="project-content">
       <div class="project-num">04 / 2025</div>
@@ -546,8 +557,8 @@
       <div class="project-meta">Режиссёр — коллаборация, плёночная съёмка</div>
       <p class="project-desc">Снял кампанию с оператором Никитой Вильчинским (Travis Scott, Cardi B, Central Cee). Концепция легла в основу поп-ап корнера в Афимолле и 15+ точек по России. Отвечал за креатив, подбор локаций, кастинг и постановку кадра.</p>
       <div class="project-links">
-        <a href="https://www.instagram.com/reel/DPBW4iUiG5b/" class="project-link" target="_blank">Main</a>
-        <a href="https://www.instagram.com/reel/DQggiuiCNav/" class="project-link" target="_blank">Backstage</a>
+        <a href="https://www.instagram.com/reel/DPBW4iUiG5b/" class="project-link" target="_blank" onclick="event.stopPropagation()">Main</a>
+        <a href="https://www.instagram.com/reel/DQggiuiCNav/" class="project-link" target="_blank" onclick="event.stopPropagation()">Backstage</a>
       </div>
     </div>
     <div class="project-tags">
@@ -555,8 +566,9 @@
       <span class="tag">Бренд</span>
       <span class="tag">Retail</span>
     </div>
-  </a>
+  </div>
 
+  <!-- 05 — Динара / BRICS -->
   <a class="project-card" href="https://youtu.be/lNdSb7R-Jl0" target="_blank">
     <img src="images/DINARA.JPEG" alt="Динара / BRICS" class="project-image">
     <div class="project-content">
@@ -564,9 +576,6 @@
       <h3 class="project-title">Динара /<br>BRICS</h3>
       <div class="project-meta">Креативный директор / режиссёр</div>
       <p class="project-desc">Создавал визуальный образ артистки: концепции для клипов, фотосессий и публичных выходов. Режиссировал три сценических номера для конкурса красоты BRICS: надувная пустыня, облака в дымовой атмосфере, движущиеся платформы. Работал с крупными режиссёрами и продакшнами.</p>
-      <div class="project-links">
-        <a href="https://youtu.be/lNdSb7R-Jl0" class="project-link" target="_blank">YouTube</a>
-      </div>
     </div>
     <div class="project-tags">
       <span class="tag">Сценография</span>
@@ -575,6 +584,7 @@
     </div>
   </a>
 
+  <!-- 06 — AYTЛО / Outlaw Moscow -->
   <a class="project-card" href="https://www.instagram.com/reel/DQggiuiCNav/" target="_blank">
     <img src="images/OUTLAW.JPEG" alt="AYTЛО / Outlaw Moscow" class="project-image">
     <div class="project-content">
@@ -590,7 +600,8 @@
     </div>
   </a>
 
-  <a class="project-card" href="https://www.instagram.com/reel/C74WyKdNHS_/" target="_blank">
+  <!-- 07 — Адель (3 ссылки) -->
+  <div class="project-card">
     <img src="images/ADEL.JPEG" alt="Адель Veigel" class="project-image">
     <div class="project-content">
       <div class="project-num">07 / 2024</div>
@@ -598,9 +609,9 @@
       <div class="project-meta">Режиссёр / оператор — съёмки и мероприятия</div>
       <p class="project-desc">Режиссировал сниппеты и рекламные интеграции. Сопровождал на мероприятиях, создавал личные съёмки и контент для соцсетей. Работал оператором на съёмках.</p>
       <div class="project-links">
-        <a href="https://www.instagram.com/reel/C74WyKdNHS_/" class="project-link" target="_blank">Reel 1</a>
-        <a href="https://www.instagram.com/reel/C6ltNvztIH5/" class="project-link" target="_blank">Reel 2</a>
-        <a href="https://www.instagram.com/reel/C2zxf-xtOsA/" class="project-link" target="_blank">Reel 3</a>
+        <a href="https://www.instagram.com/reel/C74WyKdNHS_/" class="project-link" target="_blank" onclick="event.stopPropagation()">Reel 1</a>
+        <a href="https://www.instagram.com/reel/C6ltNvztIH5/" class="project-link" target="_blank" onclick="event.stopPropagation()">Reel 2</a>
+        <a href="https://www.instagram.com/reel/C2zxf-xtOsA/" class="project-link" target="_blank" onclick="event.stopPropagation()">Reel 3</a>
       </div>
     </div>
     <div class="project-tags">
@@ -608,8 +619,9 @@
       <span class="tag">Интеграции</span>
       <span class="tag">Контент</span>
     </div>
-  </a>
+  </div>
 
+  <!-- 08 — Instasamka × Ленинград -->
   <a class="project-card" href="https://www.instagram.com/reel/DBqv5zisPRf/" target="_blank">
     <img src="images/INSTASAMKALENNGRAD.JPEG" alt="Instasamka × Ленинград" class="project-image">
     <div class="project-content">
@@ -617,9 +629,6 @@
       <h3 class="project-title">Instasamka<br>× Ленинград</h3>
       <div class="project-meta">Режиссёр — коллаборационная презентация</div>
       <p class="project-desc">Режиссировал сниппет в стилистике «RAW» съёмки. Материал попал на федеральное телевидение. Создал провокационный инфоповод в ключе артистки.</p>
-      <div class="project-links">
-        <a href="https://www.instagram.com/reel/DBqv5zisPRf/" class="project-link" target="_blank">Reel</a>
-      </div>
     </div>
     <div class="project-tags">
       <span class="tag">Сниппет</span>
@@ -628,6 +637,7 @@
     </div>
   </a>
 
+  <!-- 09 — Instasamka × TBOE -->
   <a class="project-card" href="https://youtu.be/4HhD3Y_VWVU" target="_blank">
     <img src="images/TBOE.JPEG" alt="Instasamka × TBOE" class="project-image">
     <div class="project-content">
@@ -635,9 +645,6 @@
       <h3 class="project-title">Instasamka<br>× TBOE</h3>
       <div class="project-meta">Режиссёр — капсульная коллекция «Rich Witch Club»</div>
       <p class="project-desc">Придумал концепцию и руководил съёмкой рекламной кампании. Визуальный ключ лёг в основу витрин бутиков TBOE по всей России. Кампания стала вирусной, обеспечила рост продаж.</p>
-      <div class="project-links">
-        <a href="https://youtu.be/4HhD3Y_VWVU" class="project-link" target="_blank">YouTube</a>
-      </div>
     </div>
     <div class="project-tags">
       <span class="tag">Арт-дирекшн</span>
@@ -646,6 +653,7 @@
     </div>
   </a>
 
+  <!-- 10 — Группировка Ленинград -->
   <a class="project-card" href="#" target="_blank">
     <img src="images/LENINGRAD.JPEG" alt="Группировка Ленинград" class="project-image">
     <div class="project-content">
@@ -661,6 +669,7 @@
     </div>
   </a>
 
+  <!-- 11 — Instasamka -->
   <a class="project-card" href="#" target="_blank">
     <img src="images/SAMKA.JPEG" alt="Instasamka" class="project-image">
     <div class="project-content">
@@ -676,6 +685,7 @@
     </div>
   </a>
 
+  <!-- 12 — Black Star -->
   <a class="project-card" href="#" target="_blank">
     <img src="images/BLACKSTAR.PNG" alt="Black Star" class="project-image">
     <div class="project-content">
@@ -691,6 +701,7 @@
     </div>
   </a>
 
+  <!-- 13 — Блогеры / Инфлюенсеры -->
   <a class="project-card" href="#" target="_blank">
     <div class="project-content">
       <div class="project-num">13 / 2021—2023</div>
