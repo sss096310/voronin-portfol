@@ -121,11 +121,20 @@
   }
   
   @media (max-width: 768px) {
+    .about {
+      display: flex;
+      flex-direction: column;
+    }
+    .about-bg {
+      width: 100%;
+      order: 1;
+    }
     .about-content {
       position: relative;
-      padding: 48px 24px;
+      order: 2;
+      padding: 32px 24px;
       max-width: 100%;
-      background: #f5f5f5;
+      background: #ffffff;
     }
   }
   /* ===== END ABOUT ===== */
@@ -220,6 +229,12 @@
     pointer-events: none;
     z-index: 0;
     filter: grayscale(100%);
+  }
+  
+  /* Scroll reveal for mobile */
+  .project-image.revealed {
+    opacity: 0.25;
+    transform: scale(1);
   }
   
   .project-content {
@@ -414,7 +429,7 @@
 
 <!-- ===== ABOUT SECTION ===== -->
 <section class="about" id="about">
-  <img src="images/VORONIN++.JPEG" alt="Воронин Артём" class="about-bg">
+  <img src="images/VORONIN+.JPEG" alt="Воронин Артём" class="about-bg">
   <div class="about-content">
     <p class="about-text">Придумываю, как артист или бренд должен выглядеть, звучать и вести себя — чтобы хотели быть им или с ним.</p>
     <p class="about-text">8+ лет в индустрии. Полный цикл продакшена: от первой идеи до финального результата. YouTube, TikTok, сцена, нейросети, 3D.</p>
@@ -427,7 +442,7 @@
         <li><strong>Люся Чеботина</strong> — сценография Новой Волны 2025</li>
         <li><strong>Outlaw Moscow</strong> — ASMR-формат, нейросети, коллаб с Demix</li>
         <li><strong>Группировка Ленинград</strong> — визуал альбома, клип</li>
-        <li><strong>TBOE, nkeeei, Адель Veigel и другие</strong></li>
+        <li><strong>TBOE, nkeeei, uniqe, ARTEM SHILOVETS, Динара / BRICS</strong></li>
       </ul>
     </div>
   </div>
@@ -436,7 +451,7 @@
 
 <div class="work-header" id="work">
   <h2 class="work-title">Все<br>проекты</h2>
-  <span class="work-count">13 main проектов</span>
+  <span class="work-count">13 проектов</span>
 </div>
 
 <section class="projects">
@@ -682,6 +697,30 @@
   <span>© 2026 Воронин Артём</span>
   <span>Все права защищены</span>
 </footer>
+
+<script>
+  // Scroll reveal for project images on mobile
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  
+  if (isMobile) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        } else {
+          entry.target.classList.remove('revealed');
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '-10% 0px -10% 0px'
+    });
+    
+    document.querySelectorAll('.project-image').forEach(img => {
+      observer.observe(img);
+    });
+  }
+</script>
 
 </body>
 </html>
