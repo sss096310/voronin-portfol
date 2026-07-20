@@ -79,6 +79,13 @@
     filter: grayscale(100%) contrast(1.1);
   }
   
+  .about-bg-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%) contrast(1.1);
+  }
+  
   .about-content {
     position: absolute;
     top: 0;
@@ -126,7 +133,10 @@
       flex-direction: column;
     }
     .about-bg {
-      width: 100%;
+      display: none;
+    }
+    .about-bg-mobile {
+      display: block;
       order: 1;
     }
     .about-content {
@@ -225,7 +235,7 @@
     object-fit: cover;
     opacity: 0;
     transform: scale(1.05);
-    transition: opacity 0.4s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
     pointer-events: none;
     z-index: 0;
     filter: grayscale(100%);
@@ -428,9 +438,10 @@
 </nav>
 
 <!-- ===== ABOUT SECTION ===== -->
-<section class="about" id="about">
+<section class="about">
   <img src="images/VORONIN+.JPEG" alt="Воронин Артём" class="about-bg">
-  <div class="about-content">
+  <img src="images/VORONIN+++.JPEG" alt="Воронин Артём" class="about-bg-mobile">
+  <div class="about-content" id="about">
     <p class="about-text">Придумываю, как артист или бренд должен выглядеть, звучать и вести себя — чтобы хотели быть им или с ним.</p>
     <p class="about-text">8+ лет в индустрии. Полный цикл продакшена: от первой идеи до финального результата. YouTube, TikTok, сцена, нейросети, 3D.</p>
     
@@ -633,7 +644,7 @@
   <a class="project-card" href="#" target="_blank">
     <img src="images/SAMKA.JPEG" alt="Instasamka" class="project-image">
     <div class="project-content">
-      <div class="project-num">11 / 2023—2024</div>
+      <div class="project-num">11 / 2024—2025</div>
       <h3 class="project-title">Instasamka</h3>
       <div class="project-meta">Режиссёр / арт-директор</div>
       <p class="project-desc">Создал визуальный ключ артистки для рекламных и коллаборационных проектов. Прогревы к релизам, провокационные инфоповоды, защита креатива перед заказчиками.</p>
