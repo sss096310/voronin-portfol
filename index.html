@@ -272,6 +272,34 @@
     margin-bottom: 20px;
   }
   
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .project-link {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #888;
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+  
+  .project-link:hover {
+    background: #fff;
+    color: #0a0a0a;
+    border-color: #fff;
+  }
+  
   .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -326,7 +354,7 @@
     font-size: 13px;
     color: #888;
     text-decoration: none;
-    display: border-box;
+    display: block;
     margin-bottom: 4px;
   }
   
@@ -447,7 +475,7 @@
 
 <div class="work-header" id="work">
   <h2 class="work-title">Все<br>проекты</h2>
-  <span class="work-count">12 проектов</span>
+  <span class="work-count">13 проектов</span>
 </div>
 
 <section class="projects">
@@ -474,6 +502,9 @@
       <div class="project-meta">Новая Волна 2025, Казань</div>
       <p class="project-desc">Визуал для 5 выступлений на главном музыкальном конкурсе страны. Создал 3D-графику для сценического сопровождения, синхронизировал движение артистки со светом, экранами и пиротехникой. Работал с командой сценографов и режиссёров трансляции.</p>
     </div>
+    <div class="project-links">
+      <a href="https://www.instagram.com/reel/DN2zH274uaS/" class="project-link" target="_blank">Reel 1</a>
+    </div>
     <div class="project-tags">
       <span class="tag">Визуал</span>
       <span class="tag">3D-графика</span>
@@ -488,6 +519,10 @@
       <h3 class="project-title">Клава<br>Кока</h3>
       <div class="project-meta">Сольный концерт — визуальное сопровождение</div>
       <p class="project-desc">Разработал визуальную концепцию сольного концерта совместно с креативным директором. Снял и смонтировал часть материала, который вошёл в клип и взял награду «Клип года». Полный цикл: от идеи до финального монтажа.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://vimeo.com/1208746630" class="project-link" target="_blank">Vimeo</a>
+      <a href="https://www.instagram.com/reel/DWGwAx8DMON/" class="project-link" target="_blank">Reel</a>
     </div>
     <div class="project-tags">
       <span class="tag">Режиссура</span>
@@ -504,6 +539,10 @@
       <div class="project-meta">Коллаборация — плёночная съёмка</div>
       <p class="project-desc">Снял кампанию с оператором Никитой Вильчинским (Travis Scott, Cardi B, Central Cee). Концепция легла в основу поп-ап корнера в Афимолле и 15+ точек по России. Отвечал за креатив, подбор локаций, кастинг и постановку кадра.</p>
     </div>
+    <div class="project-links">
+      <a href="https://www.instagram.com/reel/DPBW4iUiG5b/" class="project-link" target="_blank">Main Video</a>
+      <a href="https://www.instagram.com/reel/DQggiuiCNav/" class="project-link" target="_blank">Backstage</a>
+    </div>
     <div class="project-tags">
       <span class="tag">Плёнка</span>
       <span class="tag">Бренд</span>
@@ -518,6 +557,9 @@
       <h3 class="project-title">Динара /<br>BRICS</h3>
       <div class="project-meta">Арт-директор / режиссёр — 6 месяцев работы</div>
       <p class="project-desc">Полгода работал арт-директором и режиссёром над визуальным образом артистки. Создавал концепции для клипов, фотосессий и публичных выходов. Режиссировал три сценических номера для конкурса красоты BRICS: надувная пустыня, облака в дымовой атмосфере, движущиеся платформы. Работал с крупными режиссёрами и продакшнами.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://youtu.be/lNdSb7R-Jl0" class="project-link" target="_blank">YouTube</a>
     </div>
     <div class="project-tags">
       <span class="tag">Сценография</span>
@@ -541,13 +583,16 @@
     </div>
   </a>
 
-  <a class="project-card" href="https://youtu.be/cWLW-JAQbvU" target="_blank">
+  <a class="project-card" href="https://www.instagram.com/reel/DBqv5zisPRf/" target="_blank">
     <img src="images/INSTASAMKALENNGRAD.JPEG" alt="Instasamka × Ленинград" class="project-image">
     <div class="project-content">
       <div class="project-num">07 / 2024</div>
       <h3 class="project-title">Instasamka<br>× Ленинград</h3>
       <div class="project-meta">Коллаборационная презентация</div>
       <p class="project-desc">Режиссировал сниппет в стилистике «сырой» съёмки с минимальным бюджетом и максимальным вирусным эффектом. Материал попал на федеральное телевидение. Создал провокационный инфоповод в ключе артистки — обсуждение в соцсетях и СМИ.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://www.instagram.com/reel/DBqv5zisPRf/" class="project-link" target="_blank">Reel</a>
     </div>
     <div class="project-tags">
       <span class="tag">Сниппет</span>
@@ -563,6 +608,9 @@
       <h3 class="project-title">Instasamka<br>× TBOE</h3>
       <div class="project-meta">Капсульная коллекция «Rich Witch Club»</div>
       <p class="project-desc">Придумал концепцию и руководил съёмкой рекламной кампании капсульной коллекции. Визуальный ключ лёг в основу витрин бутиков TBOE по всей России. Кампания стала вирусной, обеспечила рост продаж и укрепила имидж бренда в поп-культуре. Ажиотаж в магазинах.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://youtu.be/4HhD3Y_VWVU" class="project-link" target="_blank">YouTube</a>
     </div>
     <div class="project-tags">
       <span class="tag">Арт-дирекшн</span>
@@ -616,9 +664,29 @@
     </div>
   </a>
 
+  <a class="project-card" href="https://www.instagram.com/reel/C74WyKdNHS_/" target="_blank">
+    <img src="images/ADEL.JPEG" alt="Адель Вейгель" class="project-image">
+    <div class="project-content">
+      <div class="project-num">12 / 2024</div>
+      <h3 class="project-title">Адель<br>Вейгель</h3>
+      <div class="project-meta">Режиссёр / арт-директор — съёмки и мероприятия</div>
+      <p class="project-desc">Режиссировал сниппеты и рекламные интеграции для артистки. Сопровождал на мероприятиях, создавал личные съёмки и визуальный контент для соцсетей. Работал над форматом, подачей и монтажом — от идеи до готового материала.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://www.instagram.com/reel/C74WyKdNHS_/" class="project-link" target="_blank">Reel 1</a>
+      <a href="https://www.instagram.com/reel/C6ltNvztIH5/" class="project-link" target="_blank">Reel 2</a>
+      <a href="https://www.instagram.com/reel/C2zxf-xtOsA/" class="project-link" target="_blank">Reel 3</a>
+    </div>
+    <div class="project-tags">
+      <span class="tag">Сниппеты</span>
+      <span class="tag">Интеграции</span>
+      <span class="tag">Контент</span>
+    </div>
+  </a>
+
   <a class="project-card" href="#" target="_blank">
     <div class="project-content">
-      <div class="project-num">12 / 2021—2023</div>
+      <div class="project-num">13 / 2021—2023</div>
       <h3 class="project-title">Блогеры /<br>Инфлюенсеры</h3>
       <div class="project-meta">Контент-креатор / продюсер</div>
       <p class="project-desc">Разрабатывал и продюсировал маркетинговые спецпроекты с блогерами для крупных брендов: KFC, Ozon, Spotify, Coca-Cola, Яндекс Маркет, Яндекс Музыка, VK Музыка. Создавал нативный контент под формат каждой площадки — задача: охваты, вовлечённость, продажи.</p>
