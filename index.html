@@ -415,16 +415,6 @@
     }
   }
 </style>
-<script>
-  // Prevent scroll restoration and force top on load
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-  window.addEventListener('beforeunload', function() {
-    window.scrollTo(0, 0);
-  });
-</script>
-
 </head>
 <body>
 
@@ -722,8 +712,7 @@
         }
       });
     }, {
-      threshold: 0.3,
-      rootMargin: '-10% 0px -10% 0px'
+      threshold: 0.6
     });
     
     document.querySelectorAll('.project-image').forEach(img => {
